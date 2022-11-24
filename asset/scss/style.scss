@@ -1,0 +1,180 @@
+//@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'couleurs';
+// constantes
+
+//Couleurs:
+
+$couleurTexte: $noir6; //#1e2019;
+$couleurFond: $bleu10;
+$couleurBordure: $rouge30;
+
+$couleurTexteLabel: $blanc16;
+
+$bordure1: 4px;
+$bordure2: 2px;
+$arrondiBordure: 6px;
+$styleBordure: inset;
+
+$couleur0: $bleu10;
+$couleur1: adjust-hue($couleur0, 60deg);
+$couleur2: adjust-hue($couleur0, 120deg);
+
+//$fonte: 'Cabin Condensed', sans-serif;
+$fonte: 'Montserrat', sans-serif;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $fonte;
+    font-size: 1.6rem;
+}
+
+form {
+    background-color: $bleu3;
+    padding: 10px;
+    border: $bordure1 solid $couleurBordure;
+    border-radius: $arrondiBordure;
+}
+
+label, input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 10px;
+    padding: 10px;
+    border-radius: $arrondiBordure;
+    border: $bordure1 solid transparent;
+}
+
+label {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    // position: absolute;
+    // left: -9999p;
+    // filter: hue-rotate(30deg);
+    // outline: 3px solid $gris9;
+    // outline-offset: -3px;
+    transform: scale(2);
+    margin-left: 10px;
+    padding: 10px;
+    filter: grayscale(100%);
+    & + label {
+	// color: $rouge10; 
+	letter-spacing: -1px;
+    }
+}
+
+h1 {
+    color: $couleurTexte;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.item-formulaire, legend, fieldset {
+    margin: 10px;
+    padding: 10px;
+    border: $bordure2 $styleBordure $couleurBordure;
+    border-radius: $arrondiBordure;
+}
+
+// #if01, #if02, #if03, #if04, #if05, #if06, #if13, #if15 {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start; 
+//     grid-gap: 5px;
+// }
+
+#if01,  #if06, #if13, #if15 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    grid-gap: 5px;
+}
+
+
+#if02, #if03, #if04, #if05 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+#if02 label, #if03 label, #if04 label, #if05 label {
+    grid-column: 1 / 2;
+    text-align: center;
+    color: $couleurTexteLabel;
+    background-color: $couleurFond;
+    border: 3px solid $couleurBordure;
+}
+
+#if02 input, #if03 input, #if04 input {
+    grid-column: 2 / 4;
+}
+
+#if05 {
+
+    justify-items: auto;
+
+    label {
+	grid-column: 1 / 2;
+    }
+    select {
+	grid-column: 2 / 3;
+    }
+    input[type="tel"] {
+	grid-column: 3 / 4;
+    }
+}
+
+#if05 {
+    select {
+	border: 3px solid $couleurBordure;
+	border-radius: $arrondiBordure;
+	padding: 10px;
+	margin: 10px;
+	font-size: 3rem;
+	text-align: center;
+	// height: 6rem;
+	option  {
+	    font-size: 2rem;
+	    // height: 1.5rem;
+	}
+    }
+
+    div#panneauTelephone {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 0;
+	margin: 0;
+
+	span {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    font-size: 3rem;
+	    font-weight: 600;
+	}
+    }
+}
+
+@media (orientation: landscape){
+}
+

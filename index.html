@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="Création d’un formulaire générique et responsif" />
+    <link href="asset/css/style.css" rel="stylesheet"/>
+    <title>Formulaite - Générique et responsif</title>
+  </head>
+  <body>
+    <form id="formulaire" action="" method="">
+
+      <h1 title="Love is all">Personne</h1>
+
+      <div id="if01" class="item-formulaire">
+	<input type="radio" id="f" name="civilite" value="2">
+	<label for="civilite">Madame</label>
+
+	<input type="radio" id="h" name="civilite" value="1">
+	<label for="civilite">Monsieur</label>
+
+	<input type="radio" id="nc" name="civilite" value="0" checked>
+	<label for="civilite">N.C.</label>
+      </div>
+
+      <div id="if02" class="item-formulaire">
+	<label for="nom">Nom</label>
+	<input type="text" id="nom" name="nom" required>
+      </div>
+
+      <div id="if03" class="item-formulaire">
+	<label for="prenom">Prénom</label>
+	<input type="text" id="prenom" name="prenom" required>
+      </div>
+
+      <div id="if04" class="item-formulaire">
+	<label for="courriel">Courriel</label>
+	<input type="email" id="courriel" name="courriel" required>
+      </div>
+
+      <div id="if05" class="item-formulaire">
+	<label for="telephone">Téléphone</label>
+	<!-- <label for="indicatifs">Indicatifs internationaux</label> -->
+	<select id="indicatifs" name ="indicatifs" size="0" >
+	  <option disabled>Indicatifs internationaux</option>
+	</select>
+
+	<div id="panneauTelephone">
+	  <span id="panneauIndicatif">+33</span>
+	  <input type="tel" id="telephone" name="telephone" >
+	</div>
+      </div>
+
+      <div id="if06" class="item-formulaire">
+	<label for="naissance">Date de naissance</label>
+	<input type="date" id="naissance" name="naissance" min="1922-12-31" max="2012-12-31">
+      </div>
+
+      <fieldset>
+	<legend>Points d’intérêt</legend>
+	<div id="if07" class="item-formulaire">
+	  <input type="checkbox" id="cinema" name="interets" value="0">
+	  <label for="cinema">Cinéma</label>
+	</div>
+
+	<div  id="if08" class="item-formulaire">
+	  <input type="checkbox" id="musique" name="interets" value="1">
+	  <label for="musique">Musique</label>
+	</div>
+
+	<div id="if09" class="item-formulaire">
+	  <input type="checkbox" id="peche" name="interets" value="2">
+	  <label for="peche">Pêche</label>
+	</div>
+
+	<div id="if10" class="item-formulaire">
+	  <input type="checkbox" id="lecture" name="interets" value="3">
+	  <label for="lecture">Lecture</label>
+	</div>
+
+	<div id="if11" class="item-formulaire">
+	  <input type="checkbox" id="sport" name="interets" value="4">
+	  <label for="sport">Sport</label>
+	</div>
+
+	<div id="if12" class="item-formulaire">
+	  <input type="checkbox" id="chasse" name="interets" value="5">
+	  <label for="chasse">Chasse aux moustiques</label>
+	</div>
+
+      </fieldset>
+
+      <div id="if13" class="item-formulaire">
+	<label title="Taille en cm" for="taille">Taille</label>
+	<input type="range" id="taille" name="taille" min="120" max="250" value="120" step="1">
+	<input type="number" id="valeurTaille" name="valeurTaille" disabled >
+      </div>
+
+      <div id="if14" class="item-formulaire">
+	<label for="remarques">Remarques</label>
+	<input type="checkbox" id="remarques" name="remarques" />
+	<textarea id="message" name="message" rows="5" cols="30" disabled="true"></textarea>
+      </div>
+
+      <div id="if15" class="item-formulaire">
+	<label for="avatar">Avatar</label>
+	<input type="file" id="avatar" name="avatar"  accept="image/png, image/jpg, image/jpeg, image/gif">
+      </div>
+
+      <div id="if16" class="item-formulaire">
+	<input type="reset" value="Annuler">
+	<input type="submit" value="Envoyer">
+      </div>
+      
+    </form>
+  </body>
+  <script  src="asset/js/selecteur.js">  </script>
+  <!-- <script  src="asset/js/ecouteurs.js">  </script> -->
+</html>

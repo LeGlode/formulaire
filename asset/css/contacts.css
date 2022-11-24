@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  width: 767px;
+  background-color: #ffffff; }
+
+header {
+  background-color: #a2adb9;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0px; }
+  header nav {
+    margin-top: 10px; }
+    header nav ul {
+      display: flex;
+      flex-direction: column; }
+      header nav ul li {
+        list-style-type: none; }
+        header nav ul li img {
+          max-width: 100%; }
+          header nav ul li img.transparence {
+            opacity: 0.3; }
+          header nav ul li img.opacite {
+            opacity: 1.0; }
+
+article {
+  border: 2px solid #cbd1d7;
+  max-width: 100%;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  article div {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px solid transparent; }
+    article div img {
+      max-width: 48px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: ease-in-out .125s all; }
+      article div img:hover {
+        opacity: 0.2; }
+  article dl {
+    display: grid;
+    gap: 10px;
+    margin: 0 10px;
+    color: #301934; }
+    article dl dt {
+      text-align: left;
+      margin: 5px; }
+    article dl dd {
+      text-align: left;
+      margin: 5px; }
+      article dl dd.genre {
+        display: none;
+        color: #7DF9FF; }
+      article dl dd.prenom {
+        color: #FF7F50; }
+      article dl dd.courriel {
+        display: none;
+        color: #702963; }
+      article dl dd.naissance {
+        display: none;
+        color: #7393B3; }
+      article dl dd.taille {
+        display: none;
+        color: #AA336A; }
+
+.jaune {
+  background-image: url(../img/etoileJaune.svg); }
+
+.blanche {
+  background-image: url(../img/etoileBlanche.svg); }
+
+.blanche, .jaune {
+  z-index: 1789;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: -9px;
+  right: 5px;
+  background-color: #ffffff;
+  border: 1px solid transparent; }
+
+main {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 10px; }
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  position: relative;
+  left: 55px;
+  margin-top: 10px; }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    section article dl dd.courriel {
+      display: block; } }
+@media screen and (min-width: 1024px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    section article {
+      display: grid;
+      row-gap: 4px; }
+      section article div {
+        justify-self: center; }
+      section article dl {
+        margin: 0; }
+        section article dl dd.courriel {
+          display: block; }
+        section article dl dd.naissance {
+          display: block; }
+        section article dl dd.taille {
+          display: block; } }
+
+/*# sourceMappingURL=contacts.css.map */
